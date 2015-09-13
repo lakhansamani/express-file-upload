@@ -1,9 +1,11 @@
 var express = require('express');
 var router = express.Router();
+var fs=require('fs');
 
-/* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Express File Uploader' });
 });
-
+router.post('/file_upload',function(req,res){
+	console.log(req.files.);
+});
 module.exports = router;
